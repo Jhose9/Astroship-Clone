@@ -1,0 +1,132 @@
+---
+import Card from "@/components/Card.astro";
+import type { LucideIcon } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  AppWindow,
+  Database,
+  Bot,
+  FileSearch,
+  User,
+} from "lucide-react";
+
+interface itemsData {
+  id: number;
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+const Items: itemsData[] = [
+  {
+    id: 1,
+    icon: BriefcaseBusiness,
+    title: "Bring Your Own Framework",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol HTML + JavaScript.",
+  },
+  {
+    id: 2,
+    icon: AppWindow,
+    title: "100% Static HTML, No JS",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+  },
+  {
+    id: 3,
+    icon: Database,
+    title: "On-Demand Components",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.",
+  },
+  {
+    id: 4,
+    icon: Bot,
+    title: "Broad Integration",
+    description:
+      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+  },
+  {
+    id: 5,
+    icon: FileSearch,
+    title: "SEO Enabled",
+    description:
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+  },
+  {
+    id: 6,
+    icon: User,
+    title: "Community",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+  },
+];
+---
+
+<main>
+  <h2 class="text-5xl font-bold title">
+    Everything you need to start a website
+  </h2>
+  <p class="text-lg mt-5 text-slate-600">
+    Astro comes batteries included. It takes the best parts of state-of-the-art
+    tools and adds its own innovations.
+  </p>
+  <div class="container-item">
+    <div class="gap-7 grid grid-cols-3 mt-10 item">
+      {
+        Items.map((data) => (
+          <Card
+            icon={data.icon}
+            title={data.title}
+            description={data.description}
+          />
+        ))
+      }
+    </div>
+  </div>
+</main>
+
+<style>
+  h2 {
+    margin-right: 40rem;
+  }
+  main {
+    margin-left: 7rem;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1240px) {
+    main {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem;
+    }
+    .item {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .title {
+      width: 100%;
+      margin-top: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 540px) {
+    main {
+      width: 100%;
+    }
+    .item {
+      gap: 5rem;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .container-item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>

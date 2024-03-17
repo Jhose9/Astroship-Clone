@@ -1,20 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import { Button } from "@/components/ui/button";
+import MainContent from '@/components/content.astro';
 import "@/styles/globals.css";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1 class="bg-red-600">this is tailwind css</h1>
-    <Button>shadcn button</Button>
-    <Card />
+    <MainContent/>
   </main>
 </Layout>
 
 <style>
-	h1 {
-		font-family: 'Times New Roman', Times, serif;
-	}
+
 </style>

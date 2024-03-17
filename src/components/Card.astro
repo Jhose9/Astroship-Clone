@@ -1,14 +1,24 @@
 ---
-import { Button } from "./ui/button";
+import type { LucideIcon } from "lucide-react";
+
+interface Props {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+const { title, description, icon: Icon } = Astro.props;
 ---
 
-<div>
-  <h1 class="bg-blue-400">title with tailwind css</h1>
-  <Button>shadcn button</Button>
+<div class="flex gap-5">
+  <div
+    class="bg-black rounded-full p-2 w-9 h-9 shrink-0 flex justify-center items-center"
+  >
+    <Icon className="text-white" />
+  </div>
+  <div class="w-80">
+    <h3 class="text-lg font-semibold">{title}</h3>
+    <p class="text-slate-500 text-lg">{description}</p>
+  </div>
 </div>
 
-<style>
-	h1 {
-		font-size: large;
-	}
-</style>
+<style></style>
