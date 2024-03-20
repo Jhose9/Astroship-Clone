@@ -1,19 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainContent from '@/components/content.astro';
+import MainContent from "@/components/content.astro";
+import EndContent from "@/components/endContent.astro";
 import "@/styles/globals.css";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <MainContent/>
+  <main >
+    <MainContent />
+    <EndContent />
   </main>
 </Layout>
 
 <style>
-main {
-width: 100%;
-justify-content: center;
-display: flex;
-}
 </style>
