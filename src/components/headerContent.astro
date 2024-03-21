@@ -1,0 +1,67 @@
+---
+import { Button } from "@/components/ui/button";
+import { CloudDownload, Github } from "lucide-react";
+---
+
+<main class="justify-center flex items-center">
+  <div class="max-w-7xl flex justify-center items-center base">
+    <div class="w-3/4 flex flex-col justify-center space-y-7 li">
+      <h1 class="font-bold text-6xl">Marketing website done with Astro</h1>
+      <p class="text-slate-600 text-lg li">
+        Astroship is a starter template for startups, marketing websites &
+        landing pages. Built with Astro.build and TailwindCSS. You can quickly
+        create any website with this starter.
+      </p>
+
+      <div class="btn">
+        <Button className="gap-4 h-12 font-bold hover:bg-slate-800">
+          <CloudDownload />
+          Download for Free
+        </Button>
+        <Button
+          className="gap-4 bg-white border-black border-2 text-black hover:bg-black/5 h-12 font-bold "
+        >
+          <Github className="text-black" />
+          GitHub Repo
+        </Button>
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center w-4/5 img">
+      <img src="/image.jpg" alt="" />
+    </div>
+  </div>
+</main>
+
+<style>
+  @media screen and (max-width: 970px) {
+    .base {
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .img {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 647px) {
+    .btn {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 280px) {
+    .li {
+      width: 100%;
+    }
+  }
+</style>

@@ -2,15 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import MainContent from "@/components/content.astro";
 import EndContent from "@/components/endContent.astro";
+import HeaderContent from "@/components/headerContent.astro";
 import "@/styles/globals.css";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main >
+  <main class="space-y-10 mt-20">
+    <HeaderContent />
     <MainContent />
     <EndContent />
   </main>
 </Layout>
 
-<style>
-</style>
+<style></style>
