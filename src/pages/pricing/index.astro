@@ -1,0 +1,82 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPricing from "../../components/CardPricing.astro";
+import "@/styles/globals.css";
+
+const Card1 = [
+  { id: 1, name: "Lifetime free" },
+  { id: 2, name: "Up to 3 users" },
+  { id: 3, name: "Unlimited Pages" },
+  { id: 4, name: "Astro Sub domain" },
+  { id: 5, name: "Basic Integrations" },
+  { id: 6, name: "Community Support" },
+];
+
+const Card2 = [
+  { id: 1, name: "All Free Features" },
+  { id: 2, name: "Up to 20 users" },
+  { id: 3, name: "20 Custom domains" },
+  { id: 4, name: "Unlimited Collaborators" },
+  { id: 5, name: "Advanced Integrations" },
+  { id: 6, name: "Priority Support" },
+];
+
+const Card3 = [
+  { id: 1, name: "All Pro Features" },
+  { id: 2, name: "Unlimited Custom domains" },
+  { id: 3, name: "99.99% Uptime SLA" },
+  { id: 4, name: "SAML & SSO Integration" },
+  { id: 5, name: "Dedicated Account Manager" },
+  { id: 6, name: "24/7 Phone Support" },
+];
+---
+
+<Layout title="Pricing | AstroShip">
+  <div class="mt-12">
+    <div class="space-y-5">
+      <h1 class="font-bold text-center text-5xl">Pricing</h1>
+      <p class="text-center text-slate-600 text-lg">
+        Simple & Predictable pricing. No Surprises.
+      </p>
+    </div>
+
+    <div class="flex gap-10 mt-10 justify-center items-center container-card">
+      <CardPricing
+        className="w-5/6 border-2 h-11 border-black rounded-md hover:bg-slate-100 text-lg flex justify-center items-center card"
+        btnName="Get Started"
+        price="Free"
+        type="Personal"
+        href="http://localhost:4321"
+        names={Card1}
+      />
+
+      <CardPricing
+        className="w-5/6 h-11 rounded-md hover:bg-black/80 text-lg flex justify-center items-center bg-black text-white"
+        btnName="Get Started"
+        price="$19"
+        type="Startup"
+        href="http://localhost:4321"
+        names={Card2}
+      />
+
+      <CardPricing
+        className="w-5/6 border-2 h-11 border-black rounded-md hover:bg-slate-100 text-lg flex justify-center items-center"
+        btnName="Contact us"
+        price="Custom"
+        type="Enterprise"
+        href="http://localhost:4321"
+        names={Card3}
+      />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @media screen and (max-width: 808px) {
+    .container-card {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+  }
+</style>

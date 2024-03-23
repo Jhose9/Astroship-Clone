@@ -19,7 +19,9 @@ function Navbar() {
       <div className="nav-body px-6">
         <div className="nav-title">
           <h2 className="text-lg">
-            <strong>Astro</strong>ship
+            <a href="http://localhost:4321">
+              <strong>Astro</strong>ship
+            </a>
           </h2>
         </div>
         <NavbarOptions className="nav-options" />
