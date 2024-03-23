@@ -48,7 +48,15 @@
   align-items: center;
 }
 
+.nav-options-burguer {
+  display: none;
+}
+
 @media screen and (max-width: 1018px) {
+  .nav-options-burguer {
+    display: block;
+  }
+
   .nav-register-buttons {
     display: none;
   }
@@ -71,6 +79,5 @@
   .nav-title {
     justify-content: start;
     align-items: center;
-    padding-left: 2.5rem;
   }
 }
