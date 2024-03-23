@@ -1,0 +1,37 @@
+---
+interface Props {
+  img: string;
+  type: string;
+  title: string;
+  author: string;
+}
+const { author, img, title, type } = Astro.props;
+---
+
+<div class="flex items-center gap-12 hover:cursor-pointer card">
+  <img src={img} class="rounded-lg img" alt="Image Blog" />
+  <div class="space-y-2 w-[25rem] description">
+    <p class="text-blue-400 text-lg">{type}</p>
+    <h2 class="text-2xl font-semibold w-full">{title}</h2>
+    <div class="flex">
+      <p class="text-gray-400">{author}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width: 767px) {
+    .card {
+      width: 100%;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 40rem;
+    }
+    .img {
+      width: 100%;
+    }
+    .description {
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: string;
+  job: string;
+  img: string;
+}
+
+const { img, job, name } = Astro.props;
+---
+
+<div class="w-64 card">
+  <img
+    class="rounded-lg hover:-translate-y-1 transition hover:shadow-xl object-cover aspect-square img"
+    src={img}
+    alt="Image Employees"
+  />
+  <p class="text-center text-lg text-slate-800">{name}</p>
+  <p class="text-center text-sm text-slate-500">{job}</p>
+</div>
+
+<style></style>

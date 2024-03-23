@@ -36,8 +36,12 @@ function NavbarOptions({ className }: navbarOptionsProps) {
       <p>
         <a href="http://localhost:4321/pricing">Pricing</a>
       </p>
-      <p>About</p>
-      <p>Blog</p>
+      <p>
+      <a href="http://localhost:4321/about">About</a>
+      </p>
+      <p>
+      <a href="http://localhost:4321/blog">Blog</a>
+      </p>
       <p>Contact</p>
       <a
         href="https://astroship-pro.web3templates.com/"

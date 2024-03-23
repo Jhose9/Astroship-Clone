@@ -1,0 +1,70 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import CardBlog from "@/components/cardBlog.astro";
+import "@/styles/globals.css";
+interface DataBlogProps {
+  img: string;
+  type: string;
+  title: string;
+  author: string;
+}
+
+const DataBlog: DataBlogProps[] = [
+  {
+    img: "https://images.unsplash.com/photo-1627163439134-7a8c47e08208?&fit=crop&w=430&h=240",
+    type: "courses",
+    title: "Introduction to the Essential Data Structures & Algorithms",
+    author: "Marcell Ziemann • Wed Nov 09 2022",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?&fit=crop&w=430&h=240",
+    type: "TUTORIALS",
+    title: "The Complete Guide to Full Stack Web Development",
+    author: "Janette Lynch • Tue Nov 08 2022",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
+    type: "TUTORIALS",
+    title: "How to become a Frontend Master",
+    author: "Connor Lopez • Mon Nov 07 2022",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1542393545-10f5cde2c810?&fit=crop&w=430&h=240",
+    type: "TECHNOLOGY",
+    title: "Typography Example Post",
+    author: "Charles North • Sat Nov 05 2022",
+  },
+];
+---
+
+<Layout title="Blog | AstroShip">
+  <div class="mt-14">
+    <div class="space-y-5">
+      <h1 class="font-bold text-center text-5xl">Our Blog</h1>
+      <p class="text-center text-slate-600 text-lg">
+        We write about building startups and thoughts going on our mind.
+      </p>
+    </div>
+
+    <div class="flex flex-col justify-center items-center space-y-16 mt-8 card">
+      {
+        DataBlog.map((elemt) => (
+          <CardBlog
+            img={elemt.img}
+            type={elemt.type}
+            title={elemt.title}
+            author={elemt.author}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @media screen and (max-width: 767px) {
+    .card {
+      width: 100%;
+    }
+  }
+</style>
