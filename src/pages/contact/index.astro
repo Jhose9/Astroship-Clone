@@ -1,0 +1,17 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ContactForm from '@/components/contactForm';
+import "@/styles/globals.css";
+
+---
+<Layout title="Blog | AstroShip">
+    <div class="mt-14">
+      <div class="space-y-5">
+        <h1 class="font-bold text-center text-5xl">Contact</h1>
+        <p class="text-center text-slate-600 text-lg">
+            We are a here to help.
+        </p>
+      </div>
+      <ContactForm client:load/>
+    </div>
+  </Layout>

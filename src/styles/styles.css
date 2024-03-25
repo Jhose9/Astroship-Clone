@@ -81,3 +81,18 @@
     align-items: center;
   }
 }
+
+
+
+
+
+/* contact */
+
+/* ! Revisar el !important */
+@media screen and (max-width: 752px) {
+  .form{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 1.8rem;
+  }
+}

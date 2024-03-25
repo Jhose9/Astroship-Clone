@@ -42,7 +42,9 @@ function NavbarOptions({ className }: navbarOptionsProps) {
       <p>
       <a href="http://localhost:4321/blog">Blog</a>
       </p>
-      <p>Contact</p>
+      <p>
+      <a href="http://localhost:4321/contact">Contact</a>
+      </p>
       <a
         href="https://astroship-pro.web3templates.com/"
         className="flex items-center gap-2"
